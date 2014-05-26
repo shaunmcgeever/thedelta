@@ -53,15 +53,15 @@ describe QuestionsController do
 	end
 
 
-	describe "#get_answer_by_id" do
-		it "should retrieve the answer with a valid answer id" do
-			get :get_answer_by_id, {answer_id: answer.id}
+	describe "#get_answers" do
+		it "should retrieve the answers with a valid question id" do
+			get :get_answers, { question_id: question.id }
 			expect(response).to be_success
 		end
 
 		xit "should not respond to anything but a valid answer id" do
 			expect{
-				get :get_answer, {answer_id: "failure"}
+				get :get_answer, { answer_id: "failure" }
 				}.to_not be_success
 		end
 

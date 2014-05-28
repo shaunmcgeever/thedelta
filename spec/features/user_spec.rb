@@ -33,7 +33,7 @@ describe "User can visit signup page" do
 
   context "and the user can sign up" do
     
-    xit "valid user creditials can create an account" do
+    it "valid user creditials can create an account" do
       visit sign_up_path
       fill_in 'user_name', :with => user.name
       fill_in 'user_username', :with => user.username

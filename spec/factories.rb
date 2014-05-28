@@ -1,7 +1,7 @@
 FactoryGirl.define do
 
   factory :user do
-    sequence(:name) { |n| "Duke Farnsworth The {n}"}
+    sequence(:name) { |n| "Duke Farnsworth The #{n}"}
     sequence(:username) { |n| "user-#{n}" }
     sequence(:email) { |n| "user-#{n}@example.com" }
     password "password"
@@ -20,7 +20,7 @@ FactoryGirl.define do
   end
 
   factory :admin, class: User do
-    sequence(:name) { |n| "Duke Farnsworth The {n}"}
+    sequence(:name) { |n| "Duke Farnsworth The #{n}"}
     sequence(:username) { |n| "user-#{n}" }
     sequence(:email) { |n| "user-#{n}@example.com" }
     password "password"
